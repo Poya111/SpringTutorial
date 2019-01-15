@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+   <context:annotation-config/>
+   
+   <!-- The definition below is used to scan whole package to find bean class -->
+   <context:component-scan base-package="com.Tutorial.Hamid."></context:component-scan>
+
+   <!-- SteroType Component -->
+   
+   <!-- With using @component , the definition below dose not necessary -->
+   <!-- It means @component can create an object form bean -->
+   <!-- <bean id = "cirCle" class = "com.Tutorial.Hamid.Circle" >   
+   
+   </bean> -->
+   <bean id = "aPoint" class = "com.Tutorial.Hamid.Point" >
+     <property name="xPoint" value = "0"></property>
+     <property name="yPoint" value = "0"></property>
+   </bean>
+   
+   <bean id = "bPoint" class = "com.Tutorial.Hamid.Point" >
+  <!--  <qualifier value = "cP"/> -->
+      <property name="xPoint" value = "-20"></property>
+      <property name="yPoint" value = "0"  ></property>
+   </bean>
+   
+   <bean id = "cPoint" class = "com.Tutorial.Hamid.Point" >
+      
+      <property name = "xPoint" value= "10"/>
+      <property name = "yPoint" value ="10"/>   
+   </bean>
+   
+
+</beans>
